@@ -2,9 +2,10 @@ const http = require('http');
 const fs = require('fs');
 const port = 3000;
 
+// This is our first full stack web app. Amazing huh?
+
 const server = http.createServer(function(req, res){
   res.writeHead(200, {'Content-Type': 'text/html'});
-  // res.end('Hello World');
 
   const html = fs.readFileSync('./index.html', 'utf-8');
   res.write(html);
